@@ -1,0 +1,49 @@
+
+
+.App-logo {
+  height: 3vmin;
+  pointer-events: none;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.sidebar-title {
+  padding: 24px;
+  font-weight: bold;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.App-link {
+  color: #61dafb;
+}
+#root, .App {
+  height: 100%;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  color: #353535;
+  font-family: "Roboto",sans-serif;
+}
+.pro-sidebar > .pro-sidebar-inner > .pro-sidebar-layout .pro-sidebar-header {
+  background: #0A75C2;
+  color: white;
+}

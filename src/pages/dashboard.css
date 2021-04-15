@@ -1,0 +1,12 @@
+
+  .alignment-demo-grid .bv-grid__column {
+    display: flex;
+  }
+  .alignment-demo-grid .bv-card {
+    flex: 1;
+    margin: 0;
+  }
+  
+  .grid-examples-demo .bv-card {
+    margin: 0;
+  }
