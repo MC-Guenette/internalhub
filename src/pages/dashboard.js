@@ -47,7 +47,7 @@ function Dashboard() {
         <Page>
         <Page.Header
           title="Dashboard"
-          description="Page description dolor sit amet."
+          description="Quality Assurance - Merchant Success"
           icon="home"
           breadcrumbs={[{
             href: "javascript:;",
