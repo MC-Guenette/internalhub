@@ -7,7 +7,8 @@ import Sidebar from '@bold-commerce/bevy-react/lib/components/sidebar/Sidebar';
 import Nav from '@bold-commerce/bevy-react/lib/components/nav/Nav';
 import Header from './pages/header';
 import TicketQa from './pages/ticketqa';
-import {Edit, Home, Person} from '@bold-commerce/bevy-react-icons';
+import MyAccount from './pages/myaccount';
+//import {Edit, Home, Person} from '@bold-commerce/bevy-react-icons';
 //import Page from  '@bold-commerce/bevy-react/lib/components/page/Page';
 
 function App() {
@@ -25,9 +26,9 @@ function App() {
 
 <Sidebar collapsable showHeader={false}>  
 <Nav aria-label="three link nav">
-  <Home/><Nav.Item active label="Dashboard" href="#" onClick={ e => setPage('DASHBOARD') } aria-label="first-nav-item" />
-  <Edit/> <Nav.Item iconBefore="Edit" label="Ticket QA" onClick={ e => setPage('TICKET_QA') } />
-  <Person/><Nav.Item iconBefore="person" label="My Account" href="#" onClick={ e => e.preventDefault() } />
+<Nav.Item active label="Dashboard" iconBefore="home" href="#" onClick={ e => setPage('DASHBOARD') } aria-label="first-nav-item" />
+<Nav.Item iconBefore="edit" label="Ticket QA" onClick={ e => setPage('TICKET_QA') } />
+<Nav.Item iconBefore="person" label="My Account" href="#" onClick={ e => setPage('MY_ACCOUNT') } />
 </Nav>
 
 </Sidebar>
@@ -35,7 +36,8 @@ function App() {
 {
   {
    'DASHBOARD': <Dashboard/>, 
-   'TICKET_QA': <TicketQa/>
+   'TICKET_QA': <TicketQa/>,
+   'MY_ACCOUNT': <MyAccount/>
   } [currentPage]
 }
 </AppFrame>

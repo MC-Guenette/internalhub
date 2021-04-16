@@ -13,7 +13,7 @@ function Dashboard() {
         <Page.Header
           title="My Account"
           description="Quality Assurance - Merchant Success"
-          icon="home"
+          icon="person"
           breadcrumbs={[{
             href: "javascript:;",
             text: "Home"
