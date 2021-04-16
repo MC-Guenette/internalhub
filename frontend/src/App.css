@@ -51,3 +51,49 @@ body {
   background: #0A75C2;
   color: #ffffff;
 }
+.mainHeader {
+  display: block;
+}
+.mainHeader:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.mainNav {
+  background: #0A75C2;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+  justify-content: space-between;
+  padding: .7rem 1rem;
+}
+.mainLeft {
+  margin-right: auto!important;
+}
+.mainLeft p {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mainLeft img {
+  padding-right: 10px;
+}
+.mainRight {
+  margin-left: auto!important;
+}
+.bv-sidebar__view {
+  margin-top: 50px !important;
+}
+.bv-app .bv-page {
+  flex: 1 1;
+  width: 0;
+  padding-top: 5.5rem;
+}

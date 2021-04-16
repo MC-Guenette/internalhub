@@ -5,7 +5,9 @@ import Dashboard from '../src/pages/dashboard';
 import AppFrame from '@bold-commerce/bevy-react/lib/components/appframe/AppFrame';
 import Sidebar from '@bold-commerce/bevy-react/lib/components/sidebar/Sidebar';
 import Nav from '@bold-commerce/bevy-react/lib/components/nav/Nav';
+import Header from './pages/header';
 import TicketQa from './pages/ticketqa';
+import {Edit, Home, Person} from '@bold-commerce/bevy-react-icons';
 //import Page from  '@bold-commerce/bevy-react/lib/components/page/Page';
 
 function App() {
@@ -16,14 +18,18 @@ function App() {
   }
 
   return (
+  
     <div className="App">
+        <Header/>
       <AppFrame>
-<Sidebar title="Internal Hub" collapsable>  
-      <Nav aria-label="three link nav">
-  <Nav.Item active iconBefore="home" label="Dashboard" href="#" onClick={ e => setPage('DASHBOARD') } aria-label="first-nav-item" />
-  <Nav.Item iconBefore="edit" label="Ticket QA" onClick={ e => setPage('TICKET_QA') } />
-  <Nav.Item iconBefore="person" label="My Account" href="#" onClick={ e => e.preventDefault() } />
+
+<Sidebar collapsable showHeader={false}>  
+<Nav aria-label="three link nav">
+  <Home/><Nav.Item active label="Dashboard" href="#" onClick={ e => setPage('DASHBOARD') } aria-label="first-nav-item" />
+  <Edit/> <Nav.Item iconBefore="Edit" label="Ticket QA" onClick={ e => setPage('TICKET_QA') } />
+  <Person/><Nav.Item iconBefore="person" label="My Account" href="#" onClick={ e => e.preventDefault() } />
 </Nav>
+
 </Sidebar>
 {/* <Dashboard/> */}
 {
