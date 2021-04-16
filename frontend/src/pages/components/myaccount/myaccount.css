@@ -1,0 +1,19 @@
+.userDetails{
+ display:block;
+ width: 50%;
+ text-align: center;
+ margin:auto;
+ margin-top: 20px;
+}
+
+.wow_cards{
+    display:block;
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    margin-top: 20px;
+}
+
+img.userPhoto{
+    border-radius: 50%;
+}
