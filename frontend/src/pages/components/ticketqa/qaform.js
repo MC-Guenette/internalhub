@@ -16,7 +16,7 @@ details="This information is all related, but needs a bit of separation because 
     <InputField placeholder="ie. #123456" label="Zendesk Ticket Number" helpText="This is help text, useful for giving hints or extra instructions" />
   </Card.Section>
   <Card.Section>
-    <h3>Reset password</h3>
+    <h3>Ticket Summary</h3>
     <Grid>
       <Grid.Half>
         <InputField label="Password" type="password" />
