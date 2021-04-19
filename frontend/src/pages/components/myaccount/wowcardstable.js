@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from '@bold-commerce/bevy-react/lib/components/card/Card';
 import Grid from '@bold-commerce/bevy-react/lib/components/grid/Grid';
-import data from '@bold-commerce/bevy-react/docs/data/people';
+import data from './data/wowcardsdata';
 import DataTable from '@bold-commerce/bevy-react/lib/components/datatable/DataTable';
 import Pill from '@bold-commerce/bevy-react/lib/components/pill/Pill';
-
+import BoldLogo from '/Users/mc.guenette/internalhub/frontend/src/logo.svg';
 
 const Wow = (props) => {
   const types = {
@@ -30,21 +30,21 @@ const columns = [
     {
       renderCell: (row) => (
         <React.Fragment>
-          <div className="wow_writter"><small>{ row.name }</small></div>
+          <div className="wow_writter"> <p><img src={BoldLogo} alt="React Logo" />{ row.sender }</p></div>
         </React.Fragment>
       )
     },{
         renderCell: (row) => (
             <React.Fragment>
-              <div className="wow_details">{ row.email }</div>
-              <Wow type="Deliver" />
-              <div>April.1 2021</div>
+              <div className="wow_details">{ row.message }</div>
+        <div><strong>{row.date}</strong></div>
+        <Wow type={row.status} />
             </React.Fragment>
           )
     }
   ];
 
-function WowCards() {
+function WowCardTable() {
     return(
 
 <Grid.Full>
@@ -57,4 +57,4 @@ function WowCards() {
 </Grid.Full>
 
     )}
-    export default WowCards;
+    export default WowCardTable;

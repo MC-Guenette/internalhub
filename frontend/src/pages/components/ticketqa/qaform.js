@@ -14,7 +14,7 @@ details="This information is all related, but needs a bit of separation because 
 >
 <Card sectioned>
   <Card.Section>
-    <h3>Submit a Ticket</h3>
+    <h3>Ticket QA Form</h3>
     <InputField placeholder="ie. #123456" label="Zendesk Ticket Number" helpText="This is help text, useful for giving hints or extra instructions" />
   </Card.Section>
   <Card.Section>

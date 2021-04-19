@@ -1,16 +1,16 @@
 import React from 'react';
 import Card from '@bold-commerce/bevy-react/lib/components/card/Card';
 import Grid from '@bold-commerce/bevy-react/lib/components/grid/Grid';
-import data from '@bold-commerce/bevy-react/docs/data/people';
+import data from './data/ticketdata';
 import DataTable from '@bold-commerce/bevy-react/lib/components/datatable/DataTable';
 import Pill from '@bold-commerce/bevy-react/lib/components/pill/Pill';
 
 const Status = (props) => {
     const types = {
-      'alive': 'success',
+      'assessed': 'success',
       'missing': 'alert',
-      'vacation': 'warning',
-      'unknown': null
+      'received': 'warning',
+      'closed': null
     };
   
     if (props.type) {
@@ -21,22 +21,32 @@ const Status = (props) => {
     return null;
   }
 const columns = [
+  {
+    header: "Status",
+    renderCell: (row) => (
+      <Status type={row.status} />
+    )
+  },
     {
-      header: "Executive",
+      header: "Zendesk Ticket #",
       renderCell: (row) => (
         <React.Fragment>
-          <div className="executive__name"><strong>{ row.name }</strong></div>
-          <div className="executive__title"><small>{ row.title }</small></div>
+          <div className="executive__name"><strong>{ row.ticket }</strong></div>
+          <div className="executive__title"><small>{ row.rootcause }</small></div>
         </React.Fragment>
       )
-    },{
-      header: "Email",
-      dataKey: "email"
-    },{
-      header: "Status",
+    },
+    {
+      header: "Application",
       renderCell: (row) => (
-        <Status type={row.status} />
+        <React.Fragment>
+          <div className="application_name"><strong>{ row.application }</strong></div>
+        </React.Fragment>
       )
+    },
+    {
+      header: "Assessed by",
+      dataKey: "assessedby"
     }
   ];
 function TicketSummary() {
@@ -45,7 +55,7 @@ function TicketSummary() {
   <Grid.Full>
     <Card>
       <h2>Ticket Summary</h2>
-      <p>Discount shopify customer merchant bundle brain conversion social autopilot motivator.</p>
+      <p>Filters here.</p>
 <Card>
   <DataTable
     columns={ columns }

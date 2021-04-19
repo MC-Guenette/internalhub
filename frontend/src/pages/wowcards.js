@@ -1,25 +1,24 @@
 import React from 'react';
 import Page from  '@bold-commerce/bevy-react/lib/components/page/Page';
-import QaForm from './components/ticketqa/qaform';
+import WowCardTable from '../pages/components/myaccount/wowcardstable';
 
-function TicketQa() {
+function WowCards() {
   return(
       <Page>
       <Page.Header
-        title="Submit a Ticket"
-        description="Quality Assurance - Merchant Success"
-        icon="edit"
+        title="Wow Cards - Hall of Fame"
+        icon="ticket"
         breadcrumbs={[{
           href: "javascript:;",
-          text: "Home"
+          text: "My Account"
         },{
           href: "javascript:;",
-          text: "Ticket QA"
+          text: "Wow Cards"
         }]}
           />
-<QaForm/>
+<WowCardTable/>
       </Page>
   )
 }
 
-export default TicketQa;
+export default WowCards;

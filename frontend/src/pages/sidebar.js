@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import Sidebar from '@bold-commerce/bevy-react/lib/components/sidebar/Sidebar';
 import TicketQa from '../pages/ticketqa';
-import MyAccount from '../pages/myaccount';
+import Profile from './components/myaccount/myaccount';
 import Dashboard from '../pages/dashboard';
 import AppFrame from '@bold-commerce/bevy-react/lib/components/appframe/AppFrame';
+import WowCard from '../pages/wowcards';
+import Activity from './components/myaccount/activity';
+
 
 function SideBar() {
   const [currentPage, setCurrentPage] = useState('DASHBOARD');
@@ -29,10 +32,10 @@ function SideBar() {
       label: 'My account',
       value: 'MY_ACCOUNT',
       iconBefore: 'person',
-      onClick: handleClick,
-      navItems: [
-        { label: 'Activity', key: 'activity'},
-        { label: 'Wall of Wow', key: 'wow' },
+        navItems: [
+        { label: 'Profile', value: 'MY_ACCOUNT', key: 'profile', onClick: handleClick },
+        { label: 'Wall of Wow', value: 'WOW_CARDS', key: 'wow', onClick: handleClick },
+
       ],
     },
   ];
@@ -48,7 +51,8 @@ function SideBar() {
     {
      'DASHBOARD': <Dashboard/>, 
      'TICKET_QA': <TicketQa/>,
-     'MY_ACCOUNT': <MyAccount/>
+     'MY_ACCOUNT': <Profile/>,
+     'WOW_CARDS': <WowCard/>
     } [currentPage]
   }
     </AppFrame>

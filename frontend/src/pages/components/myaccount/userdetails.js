@@ -3,6 +3,7 @@ import Card from '@bold-commerce/bevy-react/lib/components/card/Card';
 import Grid from '@bold-commerce/bevy-react/lib/components/grid/Grid';
 import Pill from '@bold-commerce/bevy-react/lib/components/pill/Pill';
 
+
 const Team = (props) => {
 
     //team
