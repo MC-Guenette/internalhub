@@ -98,3 +98,23 @@ body {
   width: 0;
   padding-top: 5.5rem;
 }
+.bv-grid {
+  margin-top: 0% !important;
+}
+.ticket-number-input {
+    width: 200px;
+}
+h3.question_helptext {
+    margin-bottom: 0;
+}
+p.question_helptext {
+    margin-top: 3px;
+}
+.bv-field__label {
+     font-weight: bold;
+}
+.addcomment_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+}
