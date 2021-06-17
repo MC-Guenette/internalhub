@@ -1,10 +1,7 @@
 import React, { useState, state } from 'react';
 import Page from '@bold-commerce/bevy-react/lib/components/page/Page';
 import Card from '@bold-commerce/bevy-react/lib/components/card/Card';
-import Grid from '@bold-commerce/bevy-react/lib/components/grid/Grid';
 import Button from '@bold-commerce/bevy-react/lib/components/button/Button';
-import RadioField from '@bold-commerce/bevy-react/lib/components/radiofield/RadioField';
-import TextareaField from '@bold-commerce/bevy-react/lib/components/textareafield/TextareaField';
 import ZendeskTicketNumber from './components/ZendeskTicketNumber';
 import QuestionComponent from './components/QuestionComponent';
 
