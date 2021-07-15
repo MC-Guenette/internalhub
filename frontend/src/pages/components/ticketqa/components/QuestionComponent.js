@@ -9,6 +9,10 @@ import IconButton from '@bold-commerce/bevy-react/lib/components/iconbutton/Icon
 export default function QuestionComponent(props) {
     const [showAddComment, setShowAddComment] = useState(false);
 
+    function handleRadioChange(e) {
+        props.onRadioSelect(e.target.name, e.target.value);
+    }
+
     function showComment() {
         setShowAddComment(!showAddComment);
     }
@@ -31,7 +35,6 @@ export default function QuestionComponent(props) {
         if (showAddComment) {
             return (
                 <IconButton
-                    icon="plusCircle"
                     activeIcon="timesCircleOutline"
                     active={true}
                     accessibilityLabel="expanding toggle"
@@ -49,21 +52,30 @@ export default function QuestionComponent(props) {
         }
     }
 
-    console.log(props.title);
     return (
         <Card.Section>
             <Grid>
+
                 <Grid.Half>
                     <h3 className="question_helptext">{props.title}</h3>
                     <p className="question_helptext bv-field__help-text">{props.helpText}</p>
                     <RadioField
                         label="Yes"
+                        value="yes"
+                        name={props.question}
+                        onChange={handleRadioChange}
                     />
                     <RadioField
                         label="No"
+                        value="no"
+                        name={props.question}
+                        onChange={handleRadioChange}
                     />
                     <RadioField
                         label="Not Applicable"
+                        value="not-applicable"
+                        name={props.question}
+                        onChange={handleRadioChange}
                     />
                 </Grid.Half>
                 <Grid.Half>
@@ -72,6 +84,7 @@ export default function QuestionComponent(props) {
                     </div>
                     {renderAddComment()}
                 </Grid.Half>
+
             </Grid>
         </Card.Section>
     )
