@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Sidebar from '@bold-commerce/bevy-react/lib/components/sidebar/Sidebar';
 import TicketQa from '../pages/ticketqa';
 import Profile from './components/myaccount/myaccount';
@@ -15,7 +15,7 @@ function SideBar() {
     console.log("Setting activeItem to", item.value);
     setCurrentPage(item.value)
   };
-    const navItems = [
+  const navItems = [
     {
       label: 'Dashboard',
       value: 'DASHBOARD',
@@ -26,35 +26,37 @@ function SideBar() {
       label: 'Ticket QA',
       value: 'TICKET_QA',
       iconBefore: 'edit',
-      onClick: handleClick,
+      navItems: [
+        { label: 'Submit a Ticket', value: 'TICKET_QA', key: 'ticketqa', onClick: handleClick },
+        { label: 'TEST PAGE', value: 'WOW_CARDS', key: 'wow', onClick: handleClick },
+      ]
     },
     {
       label: 'My account',
       value: 'MY_ACCOUNT',
       iconBefore: 'person',
-        navItems: [
+      navItems: [
         { label: 'Profile', value: 'MY_ACCOUNT', key: 'profile', onClick: handleClick },
         { label: 'Wall of Wow', value: 'WOW_CARDS', key: 'wow', onClick: handleClick },
-
       ],
     },
   ];
 
   return (
     <AppFrame>
-    <Sidebar
-    collapsable
-    navItems={navItems}
-    showHeader={false}
-    />
-  {
-    {
-     'DASHBOARD': <Dashboard/>, 
-     'TICKET_QA': <TicketQa/>,
-     'MY_ACCOUNT': <Profile/>,
-     'WOW_CARDS': <WowCard/>
-    } [currentPage]
-  }
+      <Sidebar
+        collapsable
+        navItems={navItems}
+        showHeader={false}
+      />
+      {
+        {
+          'DASHBOARD': <Dashboard />,
+          'TICKET_QA': <TicketQa />,
+          'MY_ACCOUNT': <Profile />,
+          'WOW_CARDS': <WowCard />
+        }[currentPage]
+      }
     </AppFrame>
   );
 }

@@ -88,7 +88,19 @@ body {
   padding-right: 10px;
 }
 .mainRight {
-  margin-left: auto!important;
+  margin-left: auto !important;
+  padding-right: 40px;
+  list-style: none;
+}
+li.userName {
+  display: flex;
+  align-items: center;
+}
+li.userName a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 7px;
 }
 .bv-sidebar__view {
   margin-top: 50px !important;
