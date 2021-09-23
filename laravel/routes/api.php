@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Question;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+
+// Route::middleware('auth:api')->get('/questions_test', function(Request $request) {
+//     return "hello sdf";
+//     //return Question::all();
+// });
+
+Route::get('/teams', 'App\Http\Controllers\TeamController@index');
+Route::get('/teams/{id}', 'App\Http\Controllers\TeamController@show');
+#Route::post('/teams', 'TeamController@store');

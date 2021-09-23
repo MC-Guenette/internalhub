@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Question;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Route::get('/questions', function() {
+//     //return "hello test";
+//     return Question::all();
+// });
+
+Route::get('/questions', [
+    "as" => "/questions",
+    "uses" => "App\Http\Controllers\QuestionController@get"
+]);
